@@ -1,0 +1,17 @@
+#Use Python 3.11
+tensorflow
+numpy
+opencv-python-headless
+matplotlib
+pandas
+scipy
+scikit-learn
+seaborn
+plotly
+pyautogui
+pillow
+python-xlib
+pydicom
+img2pdf
+pytest
+tkcap
