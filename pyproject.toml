@@ -19,6 +19,6 @@ dependencies = [
     "scikit-learn",
     "scipy",
     "seaborn",
-    "tensorflow",
+    "tensorflow-cpu",
     "tkcap",
 ]
