@@ -21,7 +21,7 @@ def model_fun():
         tensorflow.keras.Model: Modelo cargado listo para predicción
     """
     try:
-        model_path = 'models/conv_MLP_84.h5'
+        model_path = 'src/models/conv_MLP_84.h5'
         
         # Verificar que el archivo del modelo existe
         if not os.path.exists(model_path):

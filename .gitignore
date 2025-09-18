@@ -147,4 +147,5 @@ detector_neumonia_original.py
 Imagenes_Neumonia
 
 #Modelo entrenado H5
-models/conv_MLP_84.h5
+src/models/conv_MLP_84.h5
+
