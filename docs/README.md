@@ -147,44 +147,7 @@ source .venv/bin/activate  # Linux/macOS
 python main.py
 ```
 
-### Método 2: Instalación con Docker
-
-#### 1. Construir la imagen
-```bash
-git clone https://github.com/davidarroyave/UAO-Neumonia
-cd UAO-Neumonia
-docker build -t UAO-Neumonia:latest .
-```
-
-#### 2. Ejecutar contenedor (Linux)
-```bash
-# Permitir conexiones X11
-xhost +local:docker
-
-# Ejecutar con GUI
-docker run -it --rm \
-  -e DISPLAY=$DISPLAY \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v $(pwd)/data:/app/data \
-  --name UAO-Neumonia \
-  uao-neumonia:latest
-```
-
-#### 3. Ejecutar contenedor (macOS)
-```bash
-# Instalar XQuartz si no lo tienes
-brew install --cask xquartz
-
-# Configurar display
-xhost +localhost
-
-# Ejecutar contenedor
-docker run -it --rm \
-  -e DISPLAY=host.docker.internal:0 \
-  -v $(pwd)/data:/app/data \
-  --name uao-neumonia \
-  UAO-Neumonia:latest
-```
+### Método 2: Instalación con Docker [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](docker/README.md)
 
 ### Método 3: Instalación Manual con pip
 
@@ -246,26 +209,26 @@ El modelo **conv_MLP_84** está entrenado para clasificar las siguientes condici
 
 ---
 
-## 📋 Descripción Detallada de Módulos
+## Descripción Detallada de Módulos
 
-### 🐍 `main.py` - Interfaz Gráfica Principal
+### `main.py` - Interfaz Gráfica Principal
 **Función**: Punto de entrada de la aplicación con interfaz gráfica Tkinter.
 
 **Características**:
-- ✨ GUI intuitiva de 815x560 píxeles
-- 📁 Carga de imágenes DICOM, JPG, PNG
-- 👁️ Visualización lado a lado: imagen original vs mapa de calor
-- 📊 Mostrar resultados de predicción con probabilidades
-- 💾 Guardado de historial en CSV
-- 📄 Generación de reportes PDF
-- 🗑️ Funciones de limpieza y validación
+-  GUI intuitiva de 815x560 píxeles
+-  Carga de imágenes DICOM, JPG, PNG
+-  Visualización lado a lado: imagen original vs mapa de calor
+-  Mostrar resultados de predicción con probabilidades
+-  Guardado de historial en CSV
+-  Generación de reportes PDF
+-  Funciones de limpieza y validación
 
 **Widgets principales**:
 - `Text widgets` para visualización de imágenes
 - `Entry` para ID del paciente
 - `Buttons` para cargar, predecir, guardar, limpiar y generar PDF
 
-### 🔗 `src/data/integrator.py` - Módulo Integrador Principal
+### `src/data/integrator.py` - Módulo Integrador Principal
 **Función**: Orquesta todo el pipeline de predicción.
 
 **Flujo de trabajo**:
@@ -281,7 +244,7 @@ El modelo **conv_MLP_84** está entrenado para clasificar las siguientes condici
 - `get_class_label(index)`: Convierte índices a etiquetas
 - `validate_prediction_inputs()`: Validación de entradas
 
-### 📖 `src/data/read_img.py` - Lectura de Imágenes
+### `src/data/read_img.py` - Lectura de Imágenes
 **Función**: Manejo y conversión de diferentes formatos de imagen médica.
 
 **Capacidades**:
@@ -596,5 +559,5 @@ Este proyecto está licenciado bajo la **Licencia Apache 2.0** - ver el archivo 
 - **UV**: Gestión moderna de dependencias de Python
 
 
-**Última Actualización**: Septiembre 17, 2025
+**Última Actualización**: Septiembre 19, 2025
 **Estado del Proyecto**: Producción Estable 🟢  

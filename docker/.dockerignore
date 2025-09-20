@@ -1,0 +1,39 @@
+#Entorno virtual
+.venv/
+
+#Archivos de Python
+__pycache__/
+
+#Archivos de configuracion que no se necesitan en el contenedor
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.db
+*.sqlite3
+
+#Archivos del sistema
+.DS_Store
+Thumbs.db
+
+#Archvivos de control de versiones
+.git/
+.gitignore
+
+#Archivos de documentacion y notebooks
+notebooks/
+docs/
+
+#Archivos de pruebas
+tests/
+
+#Archivos versiones locales
+.python-version
+
+#Reportes generados por la aplicacion
+reports/
+src/visualizations/
+src/features/
+
+#Launcher (comentado para permitir su inclusión)
+#launch_uao_neumonia.sh
