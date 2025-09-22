@@ -147,7 +147,7 @@ source .venv/bin/activate  # Linux/macOS
 python main.py
 ```
 
-### Método 2: Instalación con Docker [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](docker/README.md)
+### Método 2: Instalación con Docker [![Docker](https://img.shields.io/badge/docker-ready-blue.svg
 
 ### Método 3: Instalación Manual con pip
 
